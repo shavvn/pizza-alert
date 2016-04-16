@@ -4,7 +4,7 @@ import smtplib
 from bs4 import BeautifulSoup
 
 
-region_list = ['dc', 'nyc']
+region_list = ['dc', 'nyc', 'philly', 'baltimore']
 test_list = ['test']
 
 
