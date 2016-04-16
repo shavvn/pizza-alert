@@ -18,8 +18,15 @@ def add_new_user(email, region):
 
 
 def delete_user(email, region):
-    # TODO delete from the file
-    print("under construction...")
+    csv_file_name = region+'.csv'
+    csv_file = open(csv_file_name, 'r')
+    lines = csv_file.readlines()
+    csv_file.close()
+    csv_file = open(csv_file_name, 'w')
+    for line in lines:
+        if email not in line:
+            csv_file.write(line)
+    csv_file.close()
 
 
 if __name__ == '__main__':
